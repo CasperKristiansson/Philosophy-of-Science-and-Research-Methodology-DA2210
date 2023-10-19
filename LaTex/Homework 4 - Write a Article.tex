@@ -1,0 +1,107 @@
+\documentclass{article}
+\usepackage{cite}
+\usepackage{tabularx}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{dirtytalk}
+\usepackage{pgfplotstable} 
+\usepackage{pgfplots}
+\usepackage{datatool}
+\usepackage{siunitx}
+\usepackage[hyphens]{url}  % Allows line breaks at hyphens
+\usepackage{hyperref}
+\usepackage{dirtytalk}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+
+
+\title{Homework 4 HT2023}
+\author{Casper Kristiansson}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{Reading an article}
+For this assignment where the goal is to pick an article, I chose the paper "A Longitudinal Analysis of Bloated Java Dependencies" by César Soto-Valero,  Thomas Durieux, and Benoit Baudry \cite{soltechhw4}. The paper can be found on Google Scholar where it has been posted by ACM dl Digital Library \cite{ACM2023}.
+
+
+\subsection*{c) Medium of Publication}
+%Where was the article published - in a journal, conference proceedings, or a preprint archive for example? Characterize briefly the medium of publication (or media, if it appeared in more than one way) - what was the scientific field of the journal (or other), what impact/recognition does it have, and is it peer-reviewed? 
+
+The publication medium of the paper was a conference proceeding which was called "Proceedings of the 29th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering" \cite{soltechhw4}. The publication medium is in the field of Computer Science which specifically focuses on software engineering. The publication medium has good recognition and hosts a lot of events yearly \cite{ESEC-FSE2023}. As stated on their website \say{is an internationally renowned forum for researchers, practitioners, and educators to present and discuss the most recent innovations, trends, experiences, and challenges in the field of software engineering}. The publication medium is a peer-reviewing method which is called \textbf{the double-blind review process} \cite{ESEC-FSE2022}.
+
+\subsection*{d) Purugganan and Hewitt Technique}
+%Apply the technique by Purugganan and Hewitt, and copy and fill in the template at the end of their article.  Pay particular attention to the fields Context and Significance.
+
+\begin{enumerate}
+\item \textbf{Complete citation\\}
+Soto-Valero, C., Durieux, T., \& Baudry, B. (2021). A Longitudinal Analysis of Bloated Java Dependencies. In \textit{Proceedings of the 29th ACM Joint Meeting on European Software Engineering Conference and Symposium on the Foundations of Software Engineering} (pp. 1021–1031). Association for Computing Machinery. \href{https://doi.org/10.1145/3468264.3468589}{https://doi.org/10.1145/3468264.3468589}.
+\textbf{  \item Key Words\\}
+dependencies, java, software bloat 
+\textbf{  \item General subject\\}
+Software Engineering
+\textbf{  \item Specific subject\\}
+Bloated dependencies in a single software ecosystem: Java/Maven 
+\textbf{  \item Hypothesis\\}
+I couldn't find any specific hypothesis but the study does mention four different research questions that were used to guide the research of Bloated dependencies.
+\textbf{  \item Methodology\\}
+The study uses different methodologies to tackle the different research questions. For example, question 1 used a global analysis of dependencies bloating and evaluated bloating trends in projects. Question 2 analyzes the evolution of dependencies which uses the same process by collecting the status of dependencies rather than representing it (in this case using a history of specific projects).
+\textbf{  \item Result(s)\\}
+For research question 2 the objective was to investigate if software is identified as bloated at one point in time if it's going to remain so in the future. They found that the status of dependencies that indicate to be bloated will likely remain so. The findings they provided suggest areas of improvement in dependency management.
+\textbf{  \item Summary of key points}
+  \begin{enumerate}
+      \item Analyzed 31,515 dependencies among 435 Java projects.
+      \item Found that 89.2\% of dependencies that were bloated remained so.
+      \item Bloated dependencies often came from new dependencies that weren't used
+      \item Suggests the usage of Dependant to avoid unnecessary maintenance.
+  \end{enumerate}
+\textbf{  \item Context (how this article relates to other work in the field; how it ties in with key issues and findings by others, including yourself)\\}
+I think that this article has a lot of relevant work, especially in the software development industry. Managing dependencies on projects is always a hard task especially when a project grows over time.
+\textbf{  \item Significance (to the field; in relation to your own work)}
+  \begin{enumerate}
+      \item Highlights the issue of bloating
+      \item Maintenance efforts of dependencies
+      \item Dependency management
+  \end{enumerate}
+\textbf{  \item Important Figures and/or Tables (brief description; page number)\\}
+Figure 4 highlights \say{Overview of our data collection pipeline. From a set of 147,991 Java projects on GitHub, we analyze the usage status of the dependencies in 435 Maven projects over time, to produce a dataset of 31,515 dependency trees}. which can be seen on page 1023. This shows the collection of data among the different Java projects.
+
+\end{enumerate}
+
+\subsection*{e) Reference Article and Recent Citing Article}
+%List at least one article among the references of the article that you would like to follow up, and make a short note of why. Take a quick look at this article to see that it actually is relevant. Also, choose at least one newer articles that makes a reference to the article you have chosen and you would like to read, and make a short note of why you selected it.
+
+The article I chose to follow is "In-depth investigation into debloating modern Java applications" \cite{bruce2020jshrink}. The reason for selecting it is due to its relevance and focus on the same subject. A paper that cites my selected article recently is "Studying and understanding the tradeoffs between generality and reduction in software debloating"   \cite{xin2022studying}.  This paper talks about the balance between maintaining software and achieving effective debloating.
+
+\subsection*{f) IMRaD }
+%Even though the article by Purugganan and Hewitt contains some good advice on reading, it mostly relates to other scientific fields than computer science, and contains some statements that may not be entirely relevant to articles in CS. Sample at least two of the articles listed, and check whether they follow the IMRD format. Discuss your findings: in particular, are there subfields of computer science where this format is more appropriate, and others where it is not really appropriate?
+
+The IMRaD format is based on a paper having the division and sections as an introduction, methodology, results, and discussion. My selected paper does follow IMRaD format where the paper has all of the required sections. But the paper does introduce a could of new headers like related work etc. The second article I chose is "Hierarchical text-conditional image generation with clip latent" \cite{ramesh2022hierarchical}. This article to an extent uses the IMRaD format. The content uses that structure but it is much harder to get an understanding of it due to using other headers. It has an introduction and methodology sections but the rest of the paper discusses the actual content of it.
+
+The IMRaD format could be more appropriate for specific sub-fields of computer science where specific areas it might not be as appropriate. For example, I believe IMRaD is used more where experimental studies are used.
+
+\subsection*{g) Citation Count}
+%All the articles listed above are considered significant recentcontributions to their subfield. This may be reflected in how often they have been cited by others - how many times has this happened in the case of the article you have chosen?
+Via Google Scholar my selected article has been referenced a total of 20 times \cite{GoogleScholar2023}. 
+
+\subsection*{h) Essence of the Chosen Article's Contribution}
+%Finish this exercise by stating, as clearly as possible in at most two sentences, the essence of the contribution of the article you have chosen to computer science, or science in general.
+
+The article conducted a study of software bloat in Java dependencies which revealed that out of 48,469 analyzed dependencies, 89.2\% of dependencies that become bloated remain over time. The findings of the paper highlight the importance of the usage of debloating tools and give insight into the usage of automated dependency bots.
+
+\hspace{0cm}
+\newpage
+
+\bibliographystyle{acm}
+\bibliography{main}
+
+\end{document}
