@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{cite}
+\usepackage{tabularx}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{dirtytalk}
+\usepackage{pgfplotstable} 
+\usepackage{pgfplots}
+\usepackage{datatool}
+\usepackage{siunitx}
+\usepackage[hyphens]{url}  % Allows line breaks at hyphens
+\usepackage{hyperref}
+\usepackage{dirtytalk}
+\usepackage{graphicx}
+\usepackage{microtype}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+
+
+\title{Homework 5: Statistics and probability}
+\author{Casper Kristiansson}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Probability}
+\subsection{A}
+We have three boxes, one with 2 gold coins, one with 1 gold coin and one silver coin, and lastly one with 2 silver coins. We know that the first coin we pick up is a gold coin. This means the box with 2 silver coins is not selected. This means that in the two remaining boxes, there was a 50\% chance of selecting the box with 2 gold coins and 50\% for selecting the one with 1 gold and 1 silver coin. This means there is a 50\% chance that the second coin is gold.
+
+\subsection{B}
+Bayes' theorem:
+
+\begin{align*}
+P(A|B) = \frac{P(B|A) \times P(A)}{P(B)}
+\end{align*}
+
+\begin{align*}
+P(B) = P(B|A) \times P(A)+P(B| \neg A) \times P(\neg A)
+\end{align*}
+
+
+\noindent \(P(A)=\) Overall probability of breast cancer (0.3\%)
+
+\noindent \(P(B)=\) Test result show positive
+
+\noindent \(P(A|B)=\) Given that the result shows positive for breast cancer and the patient has breast cancer
+
+\noindent We can start by calculating the P(B)
+
+\begin{align*}
+P(B) = P(B|A) \times P(A)+P(B| \neg A) \times P(\neg A) \\
+P(B) = 0.8 \times 0.003 + 0.09 \times (1-0.003) \\
+P(B) = 0.09213
+\end{align*}
+
+\noindent We then can use that to calculate the $P(A|H)$.
+
+\begin{align*}
+P(A|B) = \frac{P(B|A) \times P(A)}{P(B)} \\
+P(A|B) = \frac{0.8 \times 0.003}{0.09213} \\
+P(A|B) \approx 0.02605
+\end{align*}
+
+\noindent Meaning $\approx 2.6\%$ of the people that get a positive result from breast cancer actually have breast cancer.
+
+\section{Confidence intervals and statistical significance}
+\subsection{A}
+We can first calculate the mean value of all values which is $9.869$. By using a confidence interval \cite{simundic2008confidence} with the most common level (95\%), we can calculate that the confidence interval is 9.586 to 10.152. The calculations are derived from the standard error of the mean.
+
+\begin{align*}
+CI= 9.869 \pm (0.95 \times SEM)
+\end{align*}
+
+\noindent Where SEM can be calculated by \cite{Standard4:online}:
+
+\begin{align*}
+SEM=\frac{\sigma}{\sqrt{n}}
+\end{align*}
+
+\noindent The actual calculations of the standard error of mean value were calculated using the library SciPy (scipy.stats.sem) \cite{scipysta19:online}.
+
+\subsection{B}
+To calculate the p-value we can use something called a two-sample t-test \cite{TwoSampl7:online}. A t-test is used to compare the averages of two groups and determine if differences between them are more likely to arise from random chance. To calculate the p-value we can use a library called SciPy (scipy.stats.ttest\_ind) \cite{scipysta44:online} that allows the input of the two data sets. The function gives us a p-value of $\approx 0.34$. Such a high value shows that there is no statistically significant difference between the two data sets' mean values. We know that values $\approx 0.05$ show that the null hypothesis is rejected.
+
+\hspace{0cm}
+\newpage
+
+\bibliographystyle{acm}
+\bibliography{main}
+
+\end{document}
