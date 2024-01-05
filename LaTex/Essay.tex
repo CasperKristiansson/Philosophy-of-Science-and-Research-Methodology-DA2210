@@ -1,0 +1,95 @@
+\documentclass[10pt, titlepage]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{biblatex}
+\usepackage{url}
+\usepackage{xurl}
+\usepackage{dirtytalk}
+\usepackage{hyperref}
+\addbibresource{main.bib}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+
+\begin{document}
+
+\title{A comparison of algorithms used in traffic control systems}
+\author{Casper Kristiansson\\casperkr@kth.se}
+\maketitle
+
+\section{Summary}
+Urban traffic management faces significant challenges due to the increased number of vehicles operating on roadways, leading to inefficient traffic control systems. These systems often struggle to adapt to dynamic traffic conditions, leading to increased waiting time at intersections. Technological advances present an opportunity to offer a potential solution to these challenges by providing even more optimized traffic management systems.
+
+The thesis \say{A comparison of algorithms used in traffic control systems} \cite{bjorck2018comparison} examines the efficiency of adaptive traffic control algorithms that offer a solution in optimizing intersection traffic flow. It highlights the importance of innovative approaches in traffic management to enhance and improve the urban infrastructure.
+
+The thesis explores and provides a comparative analysis of three different traffic control algorithms: pre-timed, deterministic, and reinforcement learning. The comparative analysis assesses these algorithms' effectiveness in reducing vehicle waiting time at intersections, a key factor in urban traffic management. By exploring these potential advanced algorithms the thesis aims to provide insights that could contribute to more efficient, adaptive, and intelligent traffic management solutions in urban settings.
+
+The thesis used a simulation tool called SUMO (Simulation of Urban MObility) \cite{EclipseS24:online} which is modeled for traffic at a four-way intersection. Each of the three algorithms was tested with varied traffic demands, including both uniform and non-uniform distributions.
+
+The research revealed that the deterministic algorithms performed overall best in minimizing vehicle waiting time. The study also found that the reinforcement learning algorithm showed better performance than the pre-timed algorithm for low demands but was less effective for varied and higher demands. The thesis concluded that the deterministic algorithm's effectiveness is due to its adaptability to real-time traffic data. The authors demonstrated that the reinforcement learning algorithm performance varied, highlighting both the potential and limitations of AI-driven traffic control systems.
+
+\newpage
+\section{Scientific Considerations}
+This thesis explored a few of the most popular approaches in traffic management systems and how they perform against different flows of traffic. While the thesis does not dwell deep into the history of traffic control systems it discusses the the types of systems. This section aims to provide a critical overview of the scientific concepts and challenges of the thesis.
+
+\subsection{Historical Context}
+Traffic control systems have had like any other technical field extraordinary improvements and changes over the years. The early adoptions of traffic control systems consisted of manually operated semaphore signals that were used in the 19th century \cite{traffictechnologytoday2016}. Not long after that traffic lights were invented which showed a significant technological shift in the traffic management industry \cite{streetsmn}. These types of traffic lights relied on fixed-time signal plans.
+
+Electrical traffic lights, where computers manage all of the traffic flows, led to consistent improvements from algorithms to the usage of sensors and cameras. With the help of these technologies lea optimization in traffic flows where the traffic management systems can dynamically respond to real-time conditions. Even today there are still improvements to be found where the latest development is adaptive traffic control systems that can be integrated with vehicle-to-infrastructure communication \cite{miller2008vehicle}. These developments may lead to further revolutionizing in traffic management systems.
+
+\subsection{Statistical and Computational Analysis}
+The thesis compares three types of algorithms used in traffic control systems which are pre-timed, deterministic, and reinforcement learning. The comparison that was performed is the vehicle waiting time where the performance is measured based on the vehicle waiting time. The researchers found that the deterministic algorithm performed best across all traffic demands tested, while the reinforcement learning algorithm was more effective than the pre-timed algorithm for low demands but less effective for varied and higher demands.
+
+The reinforcement learning algorithm's performance was negatively impacted by high and varied traffic demand. The researchers state that this is due to the curse dimensionality which makes it hard to train a model efficiently. Curse of dimensionality is a term used in the context of optimization of problems and data analysis. The term refers to the complexity and computational demand of a problem increasing exponentially when adding more dimensions (variables in the data such as vehicle type, weight, age, etc.) which results in data analysis and algorithms performing less efficiently.
+
+The researchers highlighted in the thesis that the reason the deterministic algorithm performed best across the different algorithms has to do with the that it has attributed knowledge about vehicular movement. Even if it performed the best in these situations the thesis mentions that a deterministic algorithm will in most cases be the perfect algorithm in theory but lacks performance in real-world scenarios. This has to do with that the algorithm relies on comprehensive and accurate sensor data. Gather data in real-time such as vehicle speed, acceleration, vehicle distance from intersection, etc.
+
+The researchers generated 1200 different test cases on which each of the different algorithms was tested. This extensive data collection is critical to get a good and robust comparison of the algorithm's performances. Each of the test cases was tested using the simulation program SUMO (Simulation of Urban MObility). The data collected from the test cases was the Average Squared Wating Time (ASWT) which is used to compare the performance of the different algorithms.
+
+\subsection{Critical Analysis and Reproducibility}
+The thesis is mainly centered around the algorithm comparison and how the different traffic control systems perform under different circumstances. This type of methodology is a good way to test the performance of the different algorithms and compare them to each other. By using different types of test cases the researchers were able to understand exactly when and what algorithm performed best (low, high, or varied traffic flow). The researchers highlight in their thesis that the algorithms were tested using the simulated program which means that the actual performance of these algorithms in a real-world scenario might not be the same.
+
+The researchers utilized a well-known and widely used simulation tool for testing the algorithms which set a good foundation and structure for reproducibility of the result. The thesis provides a detailed description of the algorithms used and their different parameters. The researchers also used a big pool of different test cases. This allows for both better and more accurate results but also makes a better foundation to reproduce the result.
+
+\newpage
+\section{Suggestions}
+In this section Suggestion, I will delve into the potential areas of enhancement and areas that could be expanded for the thesis. The section will explore how to incorporate recent developments in traffic control such as AI and machine learning to improve the study. The researchers do a good job of comparing the different algorithms however there is room for broadening the scope into newer technologies such as Connected and Automated Vehicles (CAVs) and Intelligent Traffic Management Systems (ITMS) to provide a more beneficial study.
+
+\subsection{Recent Developments in Relevant Areas} \label{sec:Recent}
+The thesis highlights the importance of AI and machine learning in traffic control systems. AI is increasingly being integrated into traffic control systems to avoid congestion, reduce travel times, and even minimize pollution. AI-powered systems can efficiently enforce traffic rules by identifying violations in real time. An example of this is the government of India which plans to implement an AI-powered traffic management system in Goa to improve security and issue fines automatically for traffic violations \cite{Revoluti73:online}.
+
+Something that the thesis missed mentioning is how different traffic control algorithms can be used to prioritize certain vehicles such as emergency vehicles. The market for creating improved intelligent traffic management systems (ITMS) is steadily increasing. ITMS systems have become crucial in minimizing traffic congestion in smart cities where the systems offer features like Emergency Vehicle Signal Preemption (EVSP), Smart Traffic Signal Control (STSC), and public transport prioritization at traffic signals \cite{Intellig10:online}. Analyzing the performance of these systems and seeing how effective they are both in simulation and real-world scenarios could be extremely interesting.
+
+A big feature that is in development is connected and automated vehicles (CAVs). The concept is not new but something that is still in development. CAVs are an advanced class of communication with both Vehicle-to-Vehicle and Vehicle-to-Infrastructure \cite{guanetti2018control}. This means that the system allows information sharing between different vehicles and infrastructure which will help in traffic control systems but also enhance road safety and improve traffic flow. One big advance in improvement for CAVs is the usage of Multi-Agent reinforcement learning (MARL) which has shown to be a key tool in enhancing the capabilities of CAVs \cite{hua2023multi}.
+
+While I do believe the thesis did a good job comparing different algorithms used in traffic control systems the researchers only touched the subject lightly. Most algorithms used in traffic control systems are much more advanced than just the three simple ones mentioned in the thesis. Understanding how these new traffic management systems work and how their impact will be can be extremely interesting.
+
+\subsection{Suggestions}
+I believe the thesis could benefit from a more comprehensive literature review that should consist of a wider range of related studies in traffic control. While I think the researchers did a good job in identifying a few new papers in the industry they lacked literature that consists of innovations, technical reports, and case studies. While the researchers do cite a paper called \say{A reinforcement learning based traffic signal control algorithm in a connected vehicle environment} \cite{yang2017reinforcement} which covers the impact of reinforcement learning in traffic control I believe a lot of sources are outdated. The thesis could be improved a lot by reviewing the most recent advancements in traffic control technology.
+
+The researchers did a good job in identifying these algorithms and comparing them to each other it could have been more beneficial of maybe compare newer technologies in the field such as CAVs and ITMS mentioned in \ref{sec:Recent}. Most traffic control systems are much more complex and often utilize varied algorithms \cite{qadri2020state}. This means that simply analyzing the bare algorithms could lead to not providing any insight into the performance of the algorithms.
+
+A good effort was made by the researchers to create a large sample data set, which consisted of 1200 different test cases. But I believe it could be beneficial to expand it even more. This could involve using real-world traffic data or simulating more complex traffic scenarios such as multiple intersections, varied traffic conditions, broken traffic light sensors, or emergency vehicles being involved.
+
+The thesis could have benefited by including a more in-depth technical description of the algorithms used and how they were implemented. This could be done by either providing pseudocode or the actual code to these algorithms.
+
+Further enhancements to the thesis could have included a more comprehensive section on future work, elaborating on potential research areas. While they did discuss a few things that needed to be researched more there are a lot more areas that are overlooked and should be investigated more.
+
+Lastly, the section discussion could be improved a lot. The first thing that stands out is that the thesis simply has four pages filled with a wall of text with no subsections. This makes it incredibly hard to read.
+
+\newpage
+\section*{Tools Used}
+\begin{itemize}
+    \item \textbf{Grammarly}: Used for checking grammar and spelling.
+    \item  \textbf{Overleaf}: Program to write in LaTeX format.
+    \item  \textbf{Google Scholar}: Webpage to find various papers
+\end{itemize}
+
+\newpage
+\printbibliography
+
+\end{document}
